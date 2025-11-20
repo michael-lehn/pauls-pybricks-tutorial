@@ -9,7 +9,6 @@ hub = PrimeHub()
 m_left = Motor(Port.A, positive_direction=Direction.CLOCKWISE)
 sensor_left = ColorSensor(Port.D)
 
-
 m_left.run(360)
 wait(1000)
 m_left.stop()

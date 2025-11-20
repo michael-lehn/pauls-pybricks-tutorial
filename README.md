@@ -10,14 +10,14 @@ In
 
 
 ```
-async def _client_disconnect(self):
+async def _client_disconnect(self) -> bool:
     return await self._client.disconnect()
 ```
 
 change to
 
 ```
-    async def _client_disconnect(self):
+    async def _client_disconnect(self) -> bool:
         try:                 
             return await self._client.disconnect()
         except EOFError:

@@ -4,7 +4,10 @@
 
 In
 
-`/home/lehn/.local/share/`pipx/venvs/pybricksdev/lib/python3.13/site-packages/pybricksdev/connections/pybricks.py`
+```
+/home/lehn/.local/share/pipx/venvs/pybricksdev/lib/python3.13/site-packages/pybricksdev/connections/pybricks.py
+```
+
 
 ```
 async def _client_disconnect(self):

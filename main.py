@@ -7,18 +7,11 @@ from sfz import MotorPair
 hub = PrimeHub()
 
 m_left = Motor(Port.A, positive_direction=Direction.CLOCKWISE)
-m_right = Motor(Port.E, positive_direction=Direction.COUNTERCLOCKWISE)
-m = MotorPair(m_left, m_right)
-
 sensor_left = ColorSensor(Port.D)
-sensor_middle = ColorSensor(Port.C)
-sensor_right = ColorSensor(Port.F)
 
-sensor = [sensor_left, sensor_middle, sensor_right]
 
-print(f"sensor_middle: {sensor_middle.reflection()}")
+m_left.run(360)
+wait(1000)
+m_left.stop()
 
-while sensor_middle.reflection() > 50:
-    m.run_angle(-360, 360, wait=False)
-    print(f"sensor_middle: {sensor_middle.reflection()}")
-    wait(5)
+print(f"sensor_middle: {sensor_left.reflection()}")
